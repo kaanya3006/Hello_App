@@ -1,14 +1,13 @@
 package org.example;
-
+import java.util.Scanner;
 public class Main {
 
     public static void main(String args[]) {
 
-        // UC3
-        if(args.length == 0) {
-            System.out.println("Hello User");
-        } else {
-            System.out.println("Hello " + args[0]);
+        // UC5
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your name:");
+        String nameInput = sc.nextLine();
+        System.out.println("Hello " + nameInput);
         }
     }
-}
