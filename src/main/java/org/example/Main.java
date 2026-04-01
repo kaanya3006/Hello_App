@@ -4,11 +4,11 @@ public class Main {
 
     public static void main(String args[]) {
 
-        // UC3
-        if(args.length == 0) {
-            System.out.println("Hello User");
-        } else {
-            System.out.println("Hello " + args[0]);
+        // UC4
+        if(args.length > 0) {
+            for(int i = 0; i < args.length; i++) {
+                System.out.println("Hello " + args[i]);
+            }
         }
     }
 }
