@@ -1,20 +1,28 @@
 package org.example;
 import java.util.Scanner;
-import java.util.ArrayList;
-public class Main {
-
+class Main {
     public static void main(String args[]) {
 
-        // UC8
-        ArrayList<String> names = new ArrayList<String>();
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter name to remove:");
-        String removeName = sc.nextLine();
-        names.remove(removeName);
-        System.out.println("Updated names:");
-        for(int i = 0; i < names.size(); i++) {
-            System.out.println(names.get(i));
-        }
+                Scanner sc = new Scanner(System.in);
+                int[] age = new int[10];
 
-    }
-}
+                for (int i = 0; i < age.length; i++) {
+                    System.out.print("Enter age: ");
+                    age[i] = sc.nextInt();
+                }
+
+                for (int i = 0; i < age.length; i++) {
+                    if (age[i] < 0) {
+                        System.out.println("Invalid age");
+                    }
+                    else if (age[i] >= 18) {
+                        System.out.println(age[i] + " can vote");
+                    }
+                    else {
+                        System.out.println(age[i] + " cannot vote");
+                    }
+                }
+
+                sc.close();
+            }
+        }
